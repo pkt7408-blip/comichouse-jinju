@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>코믹하우스 · 진주 지하상가 길 안내도</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1D4ED8;--fg:#FFFDF7;--ac:#FACC15;--ink:#111827;--cr:#FFFDF7;--or:#EA580C;--yl:#FACC15;--co:#1D4ED8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:#0a1233}
+*{box-sizing:border-box;margin:0}
+body{font:500 16px/1.6 'Noto Sans KR',sans-serif;color:var(--ink);word-break:keep-all}
+.app{max-width:430px;margin:0 auto;background:var(--bg);color:var(--fg);transition:background-color .7s,color .7s;overflow-x:clip}
+h1,h2,.d{font-family:'Black Han Sans','Noto Sans KR',sans-serif;font-weight:400;line-height:1.05}
+h2{font-size:40px;margin-bottom:14px}
+section{position:relative;z-index:1;min-height:100svh;padding:56px 22px 130px}
+section p{margin-bottom:12px}
+.tape{height:26px;background:repeating-linear-gradient(-45deg,var(--yl) 0 14px,var(--ink) 14px 28px)}
+.mq{overflow:hidden;white-space:nowrap;background:var(--ink);color:var(--yl);font-weight:900;padding:8px 0;position:relative;z-index:1}
+.mq div{display:inline-block;animation:mq 18s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+.hero{display:flex;flex-direction:column;justify-content:center;gap:10px}
+.hero .sub{font-weight:900;font-size:18px}
+.hero h1{font-size:clamp(92px,30vw,128px);transform:rotate(-4deg);transform-origin:left;color:var(--ac);text-shadow:5px 5px 0 var(--ink);transition:color .7s;margin:6px 0 18px}
+.wn{align-self:flex-start;border:3px dashed var(--fg);padding:10px 14px;transform:rotate(3deg);font-weight:900;margin:6px 0 18px}
+.hint{font-size:14px;opacity:.85}
+.fx{position:fixed;top:0;left:50%;width:100%;max-width:430px;height:100svh;transform:translateX(-50%);overflow:hidden;pointer-events:none;z-index:0}
+.sh{position:absolute;background:var(--ac);opacity:.4;transition:background-color .7s;will-change:transform}
+.c1{width:210px;height:210px;border-radius:50%;right:-70px;top:90px}
+.c2{width:190px;height:190px;border-radius:0 100% 0 100%;left:-60px;top:48%}
+.c3{width:240px;height:120px;border-radius:240px 240px 0 0;right:-50px;bottom:60px}
+.btn{display:block;width:100%;padding:16px;border:3px solid var(--ink);border-radius:10px;background:var(--yl);color:var(--ink);font:900 17px/1.35 'Noto Sans KR',sans-serif;text-align:center;text-decoration:none;box-shadow:5px 5px 0 var(--ink);cursor:pointer}
+.btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
+.btn:focus-visible,.card:focus-visible{outline:3px solid var(--co);outline-offset:3px}
+.bk{background:var(--ink);color:var(--yl);box-shadow:5px 5px 0 var(--or)}
+.out{margin:16px 0;padding:16px;background:var(--cr);border:3px solid var(--ink);border-radius:10px;font-weight:700;min-height:70px}
+.out b{display:block;font:400 48px/1.1 'Black Han Sans',sans-serif;color:var(--or)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
+.two .btn:first-child{background:var(--ink);color:var(--cr);box-shadow:5px 5px 0 var(--co)}
+.two .btn:last-child{background:var(--cr)}
+.map{width:100%;margin:6px 0 4px}
+.map text{font:900 12px 'Noto Sans KR',sans-serif;fill:#111827}
+.st{margin-top:14px}
+.card{all:unset;box-sizing:border-box;display:grid;grid-template-columns:56px 1fr;gap:2px 14px;width:100%;padding:16px;background:#fff;color:var(--ink);border:3px solid var(--ink);border-radius:14px;box-shadow:6px 6px 0 var(--co);cursor:pointer;transition:transform .2s,box-shadow .2s,background-color .2s}
+.card .n{grid-row:1/4;font:400 56px/1 'Black Han Sans',sans-serif;color:var(--co)}
+.card i{font-style:normal;font-weight:900;font-size:18px}
+.card em{font-style:normal;font-size:15px;line-height:1.55}
+.card .ck{font-weight:900;font-size:13px;color:var(--or);margin-top:4px}
+.card.on{background:var(--yl);box-shadow:2px 2px 0 var(--ink);transform:translate(4px,4px)}
+.card.on .ck,.card.on .n{color:var(--ink)}
+.ar{font:400 64px/1 'Black Han Sans',sans-serif;text-align:center;color:var(--co);margin:6px 0}
+.big{font:400 150px/1 'Black Han Sans',sans-serif;color:var(--yl);text-shadow:6px 6px 0 var(--ink);margin:10px 0 18px}
+.cta{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:var(--ink);z-index:20}
+.cta .btn{box-shadow:none;border-color:var(--yl)}
+.cta.pulse .btn{animation:pl 1s ease-in-out infinite alternate}
+@keyframes pl{to{background:var(--cr)}}
+.ov{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(10,18,51,.82)}
+.ov[hidden]{display:none}
+.box{width:100%;max-width:390px;background:var(--cr);color:var(--ink);border:4px solid var(--ink);border-radius:6px;overflow:hidden;animation:pop .3s cubic-bezier(.2,1.3,.4,1)}
+@keyframes pop{from{transform:scale(.88) rotate(-2deg);opacity:0}}
+.bd{padding:24px 20px}
+.bd h2{font-size:30px;line-height:1.25;margin-bottom:20px}
+.ms{list-style:none;padding:0;margin:0 0 18px}
+.ms li{padding:10px 0;border-bottom:2px dashed var(--ink);font-size:15px}
+.ms b{display:block;font-size:17px}
+@media(prefers-reduced-motion:reduce){.mq div,.cta.pulse .btn,.box{animation:none}.app,.sh{transition:none}}
+</style></head><body>
+<div class="fx" aria-hidden="true"><div class="sh c1" data-r=".06"></div><div class="sh c2" data-r="-.08"></div><div class="sh c3" data-r=".02"></div></div>
+<div class="app">
+<div class="mq" aria-hidden="true"><div><span>⚠️ 진주 지하상가 ⚠️ 코믹하우스 ⚠️ 길 잃지 말 것 ⚠️ 진주 지하상가 ⚠️ 코믹하우스 ⚠️ 길 잃지 말 것 </span><span>⚠️ 진주 지하상가 ⚠️ 코믹하우스 ⚠️ 길 잃지 말 것 ⚠️ 진주 지하상가 ⚠️ 코믹하우스 ⚠️ 길 잃지 말 것 </span></div></div>
+<div class="tape" style="position:relative;z-index:1"></div>
+
+<section class="hero" data-bg="#1D4ED8" data-fg="#FFFDF7" data-ac="#FACC15">
+<p class="sub">진주 지하상가 덕후 아지트 팝업스토어</p>
+<h1>코믹<br>하우스</h1>
+<div class="wn">WANTED 길 잃은 덕후<br>도착하면 영수증 10% 페이백</div>
+<p>경남 진주시 진주대로 1035, 에나몰 B1층</p>
+<p class="hint">대중교통으로 처음 오는 당신을 위한 약도예요. 아래로 스크롤하세요 ↓</p>
+</section>
+
+<section id="loc" data-bg="#FACC15" data-fg="#111827" data-ac="#EA580C">
+<h2>내 위치에서<br>얼마나 멀지?</h2>
+<p>목적지는 경남 진주시 진주대로 1035, 에나몰 B1층이에요.</p>
+<button class="btn bk" id="dist">내 위치에서 코믹하우스까지 거리 확인</button>
+<div class="out" id="out" aria-live="polite">버튼을 누르면 현재 위치 기준 직선거리와 이동 시간을 알려줘요.</div>
+<div class="two"><a class="btn" id="nv" target="_blank" rel="noopener">네이버 지도 길찾기</a><a class="btn" id="kk" target="_blank" rel="noopener">카카오맵 길찾기</a></div>
+</section>
+
+<section id="steps" data-bg="#FFFDF7" data-fg="#111827" data-ac="#1D4ED8">
+<h2>코믹하우스까지<br>딱 4단계</h2>
+<p>경상국립대 출발 기준 추천 루트예요. 카드를 누르면 <b>완료 ✅</b>로 바뀌어요. 진행 <b id="pg">0/4</b></p>
+<svg class="map" viewBox="0 0 380 110" role="img" aria-label="미니 약도: 후문 정류장, 농협중앙지점 정류장, 에나몰 B1층, 코믹하우스">
+<path d="M30 80C80 80 100 36 150 36S220 76 250 76S320 30 352 30" fill="none" stroke="#11182733" stroke-width="5" stroke-dasharray="2 10" stroke-linecap="round"/>
+<path id="pth" d="M30 80C80 80 100 36 150 36S220 76 250 76S320 30 352 30" fill="none" stroke="#1D4ED8" stroke-width="6" stroke-linecap="round"/>
+<g fill="#FACC15" stroke="#111827" stroke-width="3"><circle cx="30" cy="80" r="10"/><circle cx="150" cy="36" r="10"/><circle cx="250" cy="76" r="10"/><circle cx="352" cy="30" r="10"/></g>
+<text x="8" y="106">후문 정류장</text><text x="150" y="16" text-anchor="middle">농협중앙지점</text><text x="250" y="102" text-anchor="middle">에나몰 B1</text><text x="372" y="58" text-anchor="end">코믹하우스</text>
+</svg>
+<div class="st" id="st"></div>
+</section>
+
+<section id="arr" data-bg="#EA580C" data-fg="#111827" data-ac="#FACC15">
+<p class="big" aria-hidden="true">B1</p>
+<h2>코믹하우스<br>입구 도착!</h2>
+<p>B1층 메인 통로 진입 후 코믹하우스 입구 도착!</p>
+<p>경남 진주시 진주대로 1035, 에나몰 B1층</p>
+<p>도착했다면 아래 노란 버튼을 눌러 체험 미션을 시작하세요.</p>
+</section>
+</div>
+
+<div class="cta" id="cb"><button class="btn" id="cta">도착 완료! 영수증 10% 페이백 미션 시작하기 🎟️</button></div>
+
+<div class="ov" id="warn" role="dialog" aria-modal="true" aria-labelledby="wt"><div class="box"><div class="tape"></div><div class="bd"><h2 id="wt">⚠️ 경고: 이 약도 없이 지하상가 진입 시, 덕후 아지트 영영 못 찾을 수 있음!</h2><button class="btn" id="go">약도 확인하고 생존하기 👉</button></div><div class="tape"></div></div></div>
+
+<div class="ov" id="mis" role="dialog" aria-modal="true" aria-labelledby="mt" hidden><div class="box"><div class="tape"></div><div class="bd"><h2 id="mt">체험 단계(미션지) 페이지로 이동합니다!</h2>
+<ul class="ms"><li><b>📸 포토존 인증</b>코믹하우스 포토존에서 인증샷 남기기</li><li><b>🔖 3개 부스 도장</b>부스 3곳을 돌며 도장 모으기</li><li><b>📝 포스트잇 방명록</b>포스트잇에 한 줄 남기고 붙이기</li></ul>
+<button class="btn" id="cl">미리보기 닫기</button></div><div class="tape"></div></div></div>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const T={la:35.1926,ln:128.0846},N=encodeURIComponent('에나몰');
+$('#nv').href=`https://map.naver.com/p/directions/-/${T.ln},${T.la},${N}/-/transit`;
+$('#kk').href=`https://map.kakao.com/link/to/${N},${T.la},${T.ln}`;
+const S=[['버스 승차','경상국립대학교가좌캠퍼스후문 정류장(47008)에서 <b>130번</b> 버스 탑승 (140, 142, 144, 146번 가능)'],['버스 이동 & 하차','환승 없이 <b>10개 정류장(약 16분)</b> 이동 후 ‘농협중앙지점 정류장(28002)’ 하차'],['지하상가 진입','하차 지점에서 직진 <b>도보 95m(약 2분)</b> 이동 후 ‘에나몰 B1층’ 지하상가 계단 진입'],['코믹하우스 도착','B1층 메인 통로 진입 후 코믹하우스 입구 도착!']];
+$('#st').innerHTML=S.map((s,i)=>`<button class="card" aria-pressed="false"><span class="n">${i+1}</span><i>STEP ${i+1}. ${s[0]}</i><em>${s[1]}</em><span class="ck">탭해서 완료 체크</span></button>`+(i<3?'<div class="ar" aria-hidden="true">↓</div>':'')).join('');
+$('#st').onclick=e=>{const c=e.target.closest('.card');if(!c)return;const on=c.classList.toggle('on');c.setAttribute('aria-pressed',on);c.querySelector('.ck').textContent=on?'완료 ✅':'탭해서 완료 체크';const n=$$('.card.on').length;$('#pg').textContent=n+'/4';$('#cb').classList.toggle('pulse',n==4)};
+const hav=(a,b,c,d)=>{const r=Math.PI/180,x=Math.sin((c-a)*r/2)**2+Math.cos(a*r)*Math.cos(c*r)*Math.sin((d-b)*r/2)**2;return 12742000*Math.asin(Math.sqrt(x))};
+const MSG='위치 권한이 꺼져 있거나 위치를 확인할 수 없어요.<br>아래 지도 앱 버튼으로 길찾기를 시작하거나, 추천 루트를 따라가 보세요.';
+$('#dist').onclick=()=>{const o=$('#out');if(!navigator.geolocation){o.innerHTML=MSG;return}o.textContent='위치 확인 중…';
+navigator.geolocation.getCurrentPosition(p=>{const m=hav(p.coords.latitude,p.coords.longitude,T.la,T.ln),d=m<1000?Math.round(m)+'m':(m/1000).toFixed(1)+'km',w=Math.max(1,Math.round(m*1.3/75)),b=Math.round(m*1.4/400)+8;
+o.innerHTML=`<b>${d}</b>직선거리 기준이에요.<br>`+(m<1500?`도보 약 ${w}분 거리예요. 걸어서 갈 만해요.`:`버스를 타면 대기 포함 약 ${b}분 걸려요. 아래 지도 앱에서 노선을 확인하세요.`)},()=>o.innerHTML=MSG,{enableHighAccuracy:true,timeout:8000})};
+const lock=(el,v)=>{el.hidden=!v;document.body.style.overflow=v?'hidden':'';if(v)el.querySelector('button').focus()};
+$('#go').onclick=()=>lock($('#warn'),false);$('#cta').onclick=()=>lock($('#mis'),true);$('#cl').onclick=()=>lock($('#mis'),false);
+addEventListener('keydown',e=>{if(e.key=='Escape'&&!$('#mis').hidden)lock($('#mis'),false)});
+document.body.style.overflow='hidden';$('#go').focus();
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){const d=x.target.dataset,s=document.documentElement.style;s.setProperty('--bg',d.bg);s.setProperty('--fg',d.fg);s.setProperty('--ac',d.ac)}}),{rootMargin:'-45% 0px -45% 0px'});
+$$('[data-bg]').forEach(s=>io.observe(s));
+const sh=$$('.sh'),pth=$('#pth'),L=pth.getTotalLength(),rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+pth.style.strokeDasharray=L;
+function tick(){const y=scrollY;if(!rm)sh.forEach((e,i)=>e.style.transform=`translate3d(${Math.sin(y/450+i*2)*34}px,${Math.cos(y/360+i*2)*46}px,0) rotate(${y*e.dataset.r}deg)`);
+const r=$('#steps').getBoundingClientRect(),p=Math.min(1,Math.max(0,(innerHeight*.75-r.top)/(r.height*.55)));pth.style.strokeDashoffset=L*(1-p)}
+addEventListener('scroll',()=>requestAnimationFrame(tick),{passive:true});tick();
+</script>
+</body></html>
